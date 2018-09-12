@@ -1,0 +1,13 @@
+<h1>Places</h1>
+  <h1>Places you have been</h1>
+  @foreach(var location in Model)
+  {
+    <a href='/places/find/@location.GetId()'>@location.GetId()</a>
+    <p>@location.cityName</p>
+    <p>@location.lengthStayed</p>
+    <img src="@location.imgURL" alt="user picture">
+  }
+
+<a href="/places/new">Add a new location.</a>
+<a href="/find">Find a location.</a>
+<a href="/">Home Page</a>
